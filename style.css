@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
+
+header, nav, aside, main, footer {
+  background-color: #e0e0e0;
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  padding: 20px;
+}
+
+header, footer { padding: 30px; font-size: 20px; }
+nav { padding: 20px; font-size: 18px; }
+
+section { display: flex; gap: 10px; min-height: 300px; }
+aside { width: 20%; padding: 60px 20px; }
+main { width: 60%; padding: 60px 20px; }
+
+@media(max-width: 768px) {
+  section { flex-direction: column; }
+  aside, main { width: 100%; }
+}
