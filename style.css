@@ -1,21 +1,158 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
-
-header, nav, aside, main, footer {
-  background-color: #e0e0e0;
-  text-align: center;
-  font-weight: bold;
-  margin: 5px;
-  padding: 20px;
+/* basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header, footer { padding: 30px; font-size: 20px; }
-nav { padding: 20px; font-size: 18px; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333333;
+}
 
-section { display: flex; gap: 10px; min-height: 300px; }
-aside { width: 20%; padding: 60px 20px; }
-main { width: 60%; padding: 60px 20px; }
+/* ------- top section ------- */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+}
 
-@media(max-width: 768px) {
-  section { flex-direction: column; }
-  aside, main { width: 100%; }
+.left-side {
+    flex: 1;
+    min-width: 280px;
+}
+
+.right-side {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.right-side img {
+    width: 100%;
+    max-width: 420px;
+}
+
+.logo-text {
+    color: #ff5b2e;
+    font-size: 55px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.left-side h2 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.left-side p {
+    font-size: 18px;
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+.store-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.store-btns img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.store-btns.center {
+    justify-content: center;
+}
+
+/* ------- content rows ------- */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 8%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.row-flip {
+    flex-direction: row-reverse;
+}
+
+.img-box {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.img-box img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.text-box {
+    flex: 1;
+    min-width: 280px;
+}
+
+.text-box h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.7;
+}
+
+/* ------- footer ------- */
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.download-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+footer a {
+    color: #2d7ff9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-logo {
+    width: 70px;
+    margin-top: 15px;
+}
+
+/* ------- mobile screen fix ------- */
+@media (max-width: 768px) {
+    .top-section,
+    .row,
+    .row-flip {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store-btns {
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 42px;
+    }
 }
